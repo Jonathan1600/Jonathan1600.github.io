@@ -53,7 +53,7 @@ class QuoteBox extends React.Component {
           <p id='author'>
            - {this.state.author}
           </p>
-          <Buttons handleClick={this.handleClick}/>
+          <Buttons handleClick={this.handleClick} quote={this.state.quote} author={this.state.author}/>
         </div>
       )
     }
@@ -67,7 +67,7 @@ class QuoteBox extends React.Component {
     render() {
       return(
         <div className='buttons'>
-          <a id='tweet-quote' className='button' href={`https://twitter.com/intent/tweet/?text=${this.state.quote} - ${this.state.author}`}><i className='fa fa-twitter'></i></a>
+          <a id='tweet-quote' className='button' href={`https://twitter.com/intent/tweet/?text=${this.props.quote} - ${this.props.author}`}><i className='fa fa-twitter'></i></a>
           <button id='new-quote' className='button' onClick={this.props.handleClick}>
             New quote
           </button>
