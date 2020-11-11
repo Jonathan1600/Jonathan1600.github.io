@@ -1,7 +1,14 @@
-body {
+
+
+html, body {
   background-color: #e8f9ff;
+  height: 100vh;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 #clock {
   font-size: 20px;
@@ -12,7 +19,6 @@ body {
   border-radius: 55px 55px 55px 55px;
 -moz-border-radius: 55px 55px 55px 55px;
 -webkit-border-radius: 55px 55px 55px 55px;
-
   padding: 20px;
 font-family: 'Fira Sans Extra Condensed', sans-serif;
   display: flex;
@@ -22,12 +28,16 @@ font-family: 'Fira Sans Extra Condensed', sans-serif;
 #clock {
   text-align: center;
 }
-
+#adjust-containers {
+  display: flex;
+  justify-content: center;
+}
 #break-label {
   display: flex;
   justify-content: center; 
   align-items: center;
   flex-direction: column;
+  margin: 0px 20px 0px 20px;
 }
 #break-label h3 {
   flex-grow: 1;
@@ -43,12 +53,12 @@ font-family: 'Fira Sans Extra Condensed', sans-serif;
   display: flex;
   align-items: center;
 }
-
 #session-label {
   display: flex;
   justify-content: center; 
   align-items: center;
   flex-direction: column;
+  margin: 0px 20px 0px 20px;
 }
 #session-label h3 {
   flex-grow: 1;
@@ -62,4 +72,11 @@ font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 #timer-label  {
   margin: 0;
+}
+svg {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
 }
